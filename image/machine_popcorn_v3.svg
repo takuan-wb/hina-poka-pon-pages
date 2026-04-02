@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="280" viewBox="0 0 360 280">
+  <defs>
+    <linearGradient id="cap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff8da8"/>
+      <stop offset="100%" stop-color="#ff5f84"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fafdff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#dce9f7" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe9ee"/>
+      <stop offset="100%" stop-color="#ffc6d2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- marquee top -->
+  <ellipse cx="180" cy="42" rx="132" ry="28" fill="#ffd7e2"/>
+  <ellipse cx="180" cy="38" rx="136" ry="30" fill="url(#cap)" stroke="#cc4f73" stroke-width="5"/>
+  <rect x="130" y="18" width="100" height="22" rx="11" fill="#fff1a6" stroke="#d2a234" stroke-width="3"/>
+  <circle cx="82" cy="38" r="6" fill="#ffe9a1"/>
+  <circle cx="108" cy="30" r="5" fill="#ffe9a1"/>
+  <circle cx="252" cy="30" r="5" fill="#ffe9a1"/>
+  <circle cx="278" cy="38" r="6" fill="#ffe9a1"/>
+
+  <!-- glass chamber -->
+  <rect x="64" y="38" width="232" height="148" rx="20" fill="url(#glass)" stroke="#7894bf" stroke-width="6"/>
+  <rect x="88" y="52" width="18" height="118" rx="9" fill="#ffffff" opacity="0.35"/>
+  <rect x="254" y="52" width="10" height="118" rx="5" fill="#ffffff" opacity="0.22"/>
+
+  <!-- popcorn inside -->
+  <g>
+    <circle cx="104" cy="96" r="13" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="126" cy="88" r="14" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="151" cy="92" r="14" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="176" cy="88" r="14" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="201" cy="92" r="14" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="226" cy="89" r="14" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="248" cy="96" r="13" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+
+    <circle cx="98" cy="120" r="13" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="122" cy="114" r="13" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="146" cy="118" r="14" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="171" cy="113" r="14" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="197" cy="118" r="14" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="221" cy="113" r="13" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="244" cy="120" r="13" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+
+    <circle cx="113" cy="142" r="12" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="136" cy="138" r="12" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="160" cy="142" r="12" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="184" cy="138" r="12" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="208" cy="142" r="12" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+    <circle cx="232" cy="138" r="12" fill="#fff7e6" stroke="#e4b66c" stroke-width="3"/>
+  </g>
+
+  <!-- base -->
+  <rect x="74" y="186" width="212" height="74" rx="20" fill="url(#base)" stroke="#cf7c94" stroke-width="6"/>
+  <rect x="122" y="199" width="116" height="40" rx="11" fill="#fff2f6" stroke="#cf7c94" stroke-width="4"/>
+  <text x="180" y="225" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700" fill="#b95a75">POPCORN</text>
+
+  <!-- drop chute and lever -->
+  <rect x="164" y="174" width="32" height="16" rx="8" fill="#9fb2d3" stroke="#637ea8" stroke-width="3"/>
+  <rect x="286" y="196" width="12" height="38" rx="6" fill="#6f87b1"/>
+  <circle cx="292" cy="238" r="11" fill="#ffcb60" stroke="#ad7e2f" stroke-width="3"/>
+
+  <!-- foot -->
+  <ellipse cx="180" cy="262" rx="96" ry="10" fill="#c58ea3" opacity="0.3"/>
+</svg>
