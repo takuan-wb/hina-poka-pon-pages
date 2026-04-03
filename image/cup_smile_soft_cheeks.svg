@@ -8,8 +8,6 @@
   <path d="M86 110 Q95 98 104 110" fill="none" stroke="#875c66" stroke-width="6" stroke-linecap="round"/>
   <path d="M136 110 Q145 98 154 110" fill="none" stroke="#875c66" stroke-width="6" stroke-linecap="round"/>
 
-  <path d="M100 132 Q120 150 140 132" fill="none" stroke="#875c66" stroke-width="6" stroke-linecap="round"/>
-
   <!-- soft cheek base -->
   <ellipse cx="79" cy="123" rx="11" ry="8" fill="#ffb4c0" opacity="0.6"/>
   <ellipse cx="161" cy="123" rx="11" ry="8" fill="#ffb4c0" opacity="0.6"/>
