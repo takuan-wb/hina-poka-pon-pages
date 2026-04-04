@@ -1,0 +1,165 @@
+{
+	"width": 1280,
+	"height": 720,
+	"fps": 30,
+	"main": "./script/main.js",
+	"environment": {
+		"sandbox-runtime": "3",
+		"audioSelectedPlayerMax": 32,
+		"nicolive": {
+			"supportedModes": [
+				"ranking"
+			],
+			"preferredSessionParameters": {
+				"totalTimeLimit": 75
+			}
+		}
+	},
+	"assets": {
+		"main": {
+			"type": "script",
+			"path": "script/main.js",
+			"global": true
+		},
+		"title_bg": {
+			"type": "image",
+			"path": "image/title_bg.svg",
+			"width": 1280,
+			"height": 720,
+			"global": true
+		},
+		"game_bg": {
+			"type": "image",
+			"path": "image/game_bg_v2.svg",
+			"width": 1280,
+			"height": 720,
+			"global": true
+		},
+		"machine": {
+			"type": "image",
+			"path": "image/machine_popcorn_v3.svg",
+			"width": 360,
+			"height": 280,
+			"global": true
+		},
+		"cup": {
+			"type": "image",
+			"path": "image/cup_smile_soft_cheeks.svg",
+			"width": 240,
+			"height": 190,
+			"global": true
+		},
+		"pop_normal": {
+			"type": "image",
+			"path": "image/popcorn_normal.svg",
+			"width": 96,
+			"height": 96,
+			"global": true
+		},
+		"pop_burnt": {
+			"type": "image",
+			"path": "image/popcorn_burnt.svg",
+			"width": 96,
+			"height": 96,
+			"global": true
+		},
+		"pop_big": {
+			"type": "image",
+			"path": "image/popcorn_big.svg",
+			"width": 96,
+			"height": 96,
+			"global": true
+		},
+		"pop_gold": {
+			"type": "image",
+			"path": "image/popcorn_gold.svg",
+			"width": 96,
+			"height": 96,
+			"global": true
+		},
+		"pop_heart": {
+			"type": "image",
+			"path": "image/popcorn_heart.svg",
+			"width": 96,
+			"height": 96,
+			"global": true
+		},
+		"pop_hina": {
+			"type": "image",
+			"path": "image/hina_poka.png",
+			"width": 1024,
+			"height": 1024,
+			"global": true
+		},
+		"start": {
+			"type": "audio",
+			"path": "audio/start",
+			"duration": 4137,
+			"hint": {
+				"extensions": [
+					".aac",
+					".m4a",
+					".ogg"
+				]
+			},
+			"systemId": "sound",
+			"global": true
+		},
+		"end": {
+			"type": "audio",
+			"path": "audio/end",
+			"duration": 3586,
+			"hint": {
+				"extensions": [
+					".aac",
+					".m4a",
+					".ogg"
+				]
+			},
+			"systemId": "sound",
+			"global": true
+		},
+		"hit_correct": {
+			"type": "audio",
+			"path": "audio/hit_correct",
+			"duration": 2784,
+			"hint": {
+				"extensions": [
+					".aac",
+					".m4a",
+					".ogg"
+				]
+			},
+			"systemId": "sound",
+			"global": true
+		},
+		"hit_wrong": {
+			"type": "audio",
+			"path": "audio/hit_wrong",
+			"duration": 517,
+			"hint": {
+				"extensions": [
+					".aac",
+					".m4a",
+					".ogg"
+				]
+			},
+			"systemId": "sound",
+			"global": true
+		},
+		"bgm_main": {
+			"type": "audio",
+			"path": "audio/bgm_main",
+			"duration": 29539,
+			"hint": {
+				"extensions": [
+					".m4a",
+					".ogg"
+				]
+			},
+			"systemId": "music",
+			"global": true
+		}
+	},
+	"globalScripts": []
+}
