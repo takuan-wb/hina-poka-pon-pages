@@ -676,7 +676,7 @@ function main() {
               try {
                 player.stop();
               } catch (e) {}
-            }, 1);
+            }, 120);
           }
           return true;
         } catch (e) {}
