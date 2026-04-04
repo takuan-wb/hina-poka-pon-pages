@@ -507,6 +507,8 @@ function main() {
       var pendingBgm = false;
       var browserGestureUnlockHandler = null;
       var bgmPlayer = null;
+      var audioAssets = null;
+      var didWarmUpHitSe = false;
       var scoreLabel = new g.Label({
         scene: scene,
         text: "SCORE: 0",
@@ -629,9 +631,15 @@ function main() {
       function getAudioAsset(id) {
         return scene.assets[id] || g.game.assets[id] || null;
       }
-      function playSe(id) {
+      audioAssets = {
+        start: getAudioAsset("start"),
+        end: getAudioAsset("end"),
+        hitCorrect: getAudioAsset("hit_correct"),
+        hitWrong: getAudioAsset("hit_wrong"),
+        bgmMain: getAudioAsset("bgm_main")
+      };
+      function playAudioAsset(audio) {
         try {
-          var audio = getAudioAsset(id);
           if (audio && typeof audio.play === "function") {
             audio.play();
             return true;
@@ -639,11 +647,54 @@ function main() {
         } catch (e) {}
         return false;
       }
+      function playSe(id) {
+        if (id === "start") {
+          return playAudioAsset(audioAssets.start);
+        }
+        if (id === "end") {
+          return playAudioAsset(audioAssets.end);
+        }
+        if (id === "hit_correct") {
+          return playAudioAsset(audioAssets.hitCorrect);
+        }
+        if (id === "hit_wrong") {
+          return playAudioAsset(audioAssets.hitWrong);
+        }
+        return playAudioAsset(getAudioAsset(id));
+      }
+      function warmUpAudioAsset(audio) {
+        try {
+          if (!audio || typeof audio.play !== "function") {
+            return false;
+          }
+          var player = audio.play();
+          if (player && typeof player.changeVolume === "function") {
+            player.changeVolume(0);
+          }
+          if (player && typeof player.stop === "function") {
+            scene.setTimeout(function () {
+              try {
+                player.stop();
+              } catch (e) {}
+            }, 1);
+          }
+          return true;
+        } catch (e) {}
+        return false;
+      }
+      function warmUpHitSe() {
+        if (didWarmUpHitSe) {
+          return;
+        }
+        didWarmUpHitSe = true;
+        warmUpAudioAsset(audioAssets.hitCorrect);
+        warmUpAudioAsset(audioAssets.hitWrong);
+      }
       function startBgm() {
         if (bgmPlayer) {
           return true;
         }
-        var bgmAsset = getAudioAsset("bgm_main");
+        var bgmAsset = audioAssets.bgmMain;
         if (!bgmAsset || typeof bgmAsset.play !== "function") {
           return false;
         }
@@ -670,6 +721,7 @@ function main() {
           return;
         }
         hasUserInteracted = true;
+        warmUpHitSe();
         if (pendingStartSe) {
           startVoicePlayed = playSe("start");
           pendingStartSe = !startVoicePlayed;

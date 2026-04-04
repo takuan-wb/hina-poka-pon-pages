@@ -3,6 +3,5 @@ if (! ("optionProps" in window)) {
 	window.optionProps = {};
 }
 window.optionProps.magnify = true;
-
 window.optionProps.hasInstanceStorage = false;
 	
