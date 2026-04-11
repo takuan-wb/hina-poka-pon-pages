@@ -40,6 +40,7 @@ function main() {
     CUP_WIDTH: 220,
     CUP_HEIGHT: 170,
     CUP_HOLD_OFFSET_Y: -70,
+    CUP_TOUCH_HOLD_OFFSET_Y: -82,
     CUP_HITBOX_WIDTH: 162,
     CUP_HITBOX_HEIGHT: 46,
     POPCORN_GRAVITY: 0.28,
@@ -509,6 +510,10 @@ function main() {
       var bgmPlayer = null;
       var audioAssets = null;
       var didWarmUpHitSe = false;
+      var cupHoldOffsetY = CONFIG.CUP_HOLD_OFFSET_Y;
+      if (typeof window !== "undefined" && ("ontouchstart" in window || typeof navigator !== "undefined" && navigator.maxTouchPoints > 0)) {
+        cupHoldOffsetY = CONFIG.CUP_TOUCH_HOLD_OFFSET_Y;
+      }
       var scoreLabel = new g.Label({
         scene: scene,
         text: "SCORE: 0",
@@ -1017,7 +1022,7 @@ function main() {
           return;
         }
         cupState.targetX = event.point.x + event.startDelta.x;
-        cupState.targetY = event.point.y + event.startDelta.y + CONFIG.CUP_HOLD_OFFSET_Y;
+        cupState.targetY = event.point.y + event.startDelta.y + cupHoldOffsetY;
       });
       scene.onPointUpCapture.add(function () {
         isPointerDown = false;
